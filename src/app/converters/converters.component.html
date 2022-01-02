@@ -1,0 +1,74 @@
+<div class="converters alternative">
+    <mat-card 
+    class="converter" 
+    *ngFor="let quantity of quantities; let i=index;">
+        
+        <mat-card-title class="cardTitle">{{quantity.name}}</mat-card-title>
+
+        <mat-card-content>
+            
+            <div class="cardContentContainer">
+                <mat-form-field class="numberInput">
+                    <input
+                        matInput
+                        type="number" 
+                        ngModel = "numberInput" 
+                        #numberInput = "ngModel" 
+                        [value]="numberInput" 
+                        (change)="numberOriginalChanged(i,numberInput.value)">
+                </mat-form-field>
+                
+                <mat-form-field class="unitFrom">
+                    <mat-label class="selectLabel1">
+                        Select a unit
+                    </mat-label>
+                    <mat-label class="selectLabel2">
+                        Unit
+                    </mat-label>
+                    <mat-select
+                        name="inputUnitSelector" 
+                        id="inputUnitSelector" 
+                        [(ngModel)]="quantity.currentUnitFrom">
+    
+                        <mat-option 
+                            [value]="unit" 
+                            *ngFor="let unit of quantity.units">
+                            {{unit}}
+                        </mat-option>
+    
+                    </mat-select>
+                </mat-form-field>
+                
+                
+                <span class="result">= {{unitCalculation(i)}}</span>
+                
+                <mat-form-field class="unitTo">
+                    <mat-label class="selectLabel1">
+                        Select a unit
+                    </mat-label>
+                    <mat-label class="selectLabel2">
+                        Unit
+                    </mat-label>     
+                    <mat-select 
+                        name="inputUnitSelector" 
+                        id="inputUnitSelector" 
+                        [(ngModel)]="quantity.currentUnitTo">
+                        
+                        <mat-option 
+                            [value]="unit" 
+                            *ngFor="let unit of quantity.units">
+                            {{unit}}
+                        </mat-option>
+    
+                    </mat-select>
+                </mat-form-field>
+
+                <button mat-flat-button color="buttonColor" class="buttonConvert">
+                    Convert
+                </button>
+
+            </div>
+            
+        </mat-card-content>
+    </mat-card>
+</div>

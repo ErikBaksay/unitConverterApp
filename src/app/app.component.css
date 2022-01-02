@@ -1,0 +1,21 @@
+#appTitle{
+    text-align: center;
+    margin-top: 2vh;
+    color:#3D3D3D;
+    font-weight: bold;
+    font-size: 2.1em;
+}
+
+@media screen and (max-width: 480px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    #appTitle{
+        font-size: 1.8em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    
+}
