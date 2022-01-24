@@ -1,3 +1,7 @@
+unitConverterApp is a unit converter created using Angular, Material Design, HTML, CSS and TypeScript
+
+You can view it here: https://erikbaksay.github.io/unit-converter-app/
+
 # UnitConverterApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
